@@ -1,110 +1,127 @@
-/* Estilos gerais */
+/* Estilos Gerais */
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #2b2b2b;
-  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ocupa toda a altura da tela */
-  overflow: hidden; /* Impede a rolagem da tela */
 }
 
-h1 {
-  white-space: nowrap;
-  font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
-  text-align: center;
-  margin-bottom: 20px;
+/* Cabeçalho */
+header {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header .logo p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
+  color: #000;
 }
 
-.game-container {
+/* Galeria de Produtos */
+#produtos .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#produtos .product {
+  width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+#produtos .product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Depoimentos */
+#depoimentos p {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* Contato */
+#contato a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+/* Rodapé */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.about-product {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 400px; /* Tamanho fixo do tabuleiro */
-  height: 400px; /* Tamanho fixo do tabuleiro */
-  box-sizing: border-box;
+  background-color: #fff;
+  text-align: left;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos do tabuleiro */
-.board {
-  display: grid;
-  width: 100%; /* O tabuleiro ocupa 100% da largura do container */
-  height: 100%; /* O tabuleiro ocupa 100% da altura do container */
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  border: 2px solid white;
-  aspect-ratio: 1; /* Garante que o tabuleiro seja quadrado */
-  margin-bottom: 20px; /* Espaçamento entre o tabuleiro e o nome */
+.about-product h2 {
+  color: #000;
 }
 
-/* Estilos das células */
-.cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.about-product p {
+  line-height: 1.6;
+  color: #333;
 }
 
-.cell.light {
-  background-color: #f0d9b5;
+/* Benefícios */
+.benefits {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: left;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cell.dark {
-  background-color: #b58863;
+.benefits h2 {
+  color: #000;
 }
 
-.cell.selected {
-  outline: 3px solid yellow; /* Destaca a célula selecionada */
+.benefits ul {
+  list-style: disc;
+  padding-left: 20px;
 }
 
-/* Estilos das peças */
-.piece {
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.piece.white {
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.piece.black {
-  background-color: black;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-/* Estilo para o nome abaixo do tabuleiro */
-.name {
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 10px; /* Espaço entre o tabuleiro e o nome */
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  .game-container {
-    width: 80%; /* Tabuleiro ocupa 80% da largura da tela em dispositivos pequenos */
-    height: 80%; /* Tabuleiro ocupa 80% da altura da tela */
-  }
+.benefits ul li {
+  line-height: 1.6;
+  color: #333;
 }
