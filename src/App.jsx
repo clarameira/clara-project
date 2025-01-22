@@ -5,6 +5,7 @@ function App() {
   // Tamanho de cada vídeo em MB
   const videoSizeMB = 25; // Exemplo: cada vídeo tem 25 MB
   const maxSizeMB = 500; // Tamanho máximo de 500 MB
+  const additionalVideos = 25; // Adicionar mais 25 vídeos (15 anteriores + 10 novos)
   const videos = [];
 
   // Adiciona os vídeos até atingir o limite de 500 MB
@@ -12,6 +13,11 @@ function App() {
   while (currentSize + videoSizeMB <= maxSizeMB) {
     videos.push("/assets/WhatsApp Video 2025-01-22 at 15.06.25.mp4");
     currentSize += videoSizeMB;
+  }
+
+  // Adiciona mais 25 vídeos extras
+  for (let i = 0; i < additionalVideos; i++) {
+    videos.push("/assets/WhatsApp Video 2025-01-22 at 15.06.25.mp4");
   }
 
   return (
@@ -71,6 +77,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
